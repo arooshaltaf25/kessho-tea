@@ -1,0 +1,134 @@
+.hero {
+  background: linear-gradient(180deg, var(--parchment-dim), var(--parchment));
+  border-bottom: 1px solid var(--line);
+}
+
+.hero__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 72px 0 64px;
+}
+
+.hero__copy {
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hero__copy h1 {
+  font-size: clamp(2.1rem, 4.2vw, 3.2rem);
+  line-height: 1.08;
+}
+
+.hero__lede {
+  color: var(--sage);
+  font-size: 1.02rem;
+  max-width: 46ch;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 22px;
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+}
+
+.btn--primary {
+  background: var(--pine);
+  color: var(--parchment);
+}
+
+.btn--primary:hover {
+  background: var(--brew);
+}
+
+.btn--ghost {
+  border-color: var(--line);
+  color: var(--pine);
+}
+
+.btn--ghost:hover {
+  border-color: var(--pine);
+}
+
+.hero__dial {
+  flex-shrink: 0;
+  display: none;
+}
+
+@media (min-width: 860px) {
+  .hero__dial {
+    display: block;
+  }
+}
+
+.section {
+  padding: 56px 0;
+}
+
+.section__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.section__more {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--sage);
+}
+
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.cat-card {
+  position: relative;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: border-color 0.15s ease;
+}
+
+.cat-card:hover {
+  border-color: var(--clay);
+}
+
+.cat-card p {
+  color: var(--sage);
+  font-size: 0.88rem;
+}
+
+.cat-card__arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: var(--clay);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+}
